@@ -1,9 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
-    <div className="">
-      <Button>Click on me fucker</Button>
+    <div className="flex gap-4">
+      <Button>Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="destructive">Destructive</Button>
     </div>
-  );
+  )
 }
