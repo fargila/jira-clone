@@ -1,10 +1,10 @@
-import React from 'react'
+"use client"
+
+import { SignUpCard } from "@/app/features/auth/components/sign-up-card"
 
 const SignUpPage = () => {
     return (
-        <div>
-            Sign Up page
-        </div>
+        <SignUpCard/>
     )
 }
 
