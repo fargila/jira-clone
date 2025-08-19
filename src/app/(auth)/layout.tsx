@@ -11,6 +11,7 @@ interface AuthLayoutProps {
 
 const AuthLayout = ({ children }: AuthLayoutProps) => {
     const pathname = usePathname()
+    const isSignIn = pathname === "/sign-in"
   
     return (
     <main className="bg-neutral-100 min-h-screen">
@@ -18,8 +19,8 @@ const AuthLayout = ({ children }: AuthLayoutProps) => {
             <nav className="flex justify-between items-center">
                 <Image src="/public/logo.svg" height={150} width={50} alt="Logo"></Image>
                 <Button variant="secondary" asChild>
-                    <Link href={pathname === "/sign-in" ? "/sign-up" : "/sign-in"}>
-                        {pathname === "/sign-in" ? "Sign Up" : "Login"}
+                    <Link href={isSignIn ? "/sign-up" : "/sign-in"}>
+                        {isSignIn ? "Sign Up" : "Login"}
                     </Link>
                 </Button>
             </nav>

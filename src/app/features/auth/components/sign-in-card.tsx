@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
+import Link from "next/link"
 
 const formSchema = z.object({
     email: z.string().trim().min(1, "This field is required!"),
@@ -30,7 +31,7 @@ export const SignInCard = () => {
     return (
         <Card className="w-full h-full md:w-[487px] border-none shadow-none">
             <CardHeader className="flex items-center justify-center text-center p-7">
-                <CardTitle className="text-2xl">Sup, lil  bro.</CardTitle>
+                <CardTitle className="text-2xl">Login, lil  bro.</CardTitle>
             </CardHeader>
             
             <div className="px-7 mb-2"><DottedSeparator/></div>
@@ -87,6 +88,17 @@ export const SignInCard = () => {
                     <FaGithub className="mr-2 size-5"/>
                     Login with Github
                 </Button>
+            </CardContent>
+            
+            <div><DottedSeparator/></div>
+
+            <CardContent className="p-7 flex items-center justify-center">
+                <p>
+                    <Link href="/sign-up">
+                        <span className="text-blue-700 hover:text-blue-400">Sign Up</span>
+                    </Link>
+                    &nbsp;if you&apos;re not affiliated with us.
+                </p>
             </CardContent>
         </Card>
     )

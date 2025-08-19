@@ -114,6 +114,18 @@ export const SignUpCard = () => {
                     Login with Github
                 </Button>
             </CardContent>
+
+            <div><DottedSeparator/></div>
+
+            <CardContent className="p-7 flex items-center justify-center">
+                <p>
+                    Just&nbsp;
+                    <Link href="/sign-in">
+                        <span className="text-blue-700 hover:text-blue-400">Sign In</span>
+                    </Link>
+                    &nbsp;if you already have an account.
+                </p>
+            </CardContent>
         </Card>
     )
 }
